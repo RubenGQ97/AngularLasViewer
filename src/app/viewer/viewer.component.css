@@ -1,0 +1,43 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: rgb(0, 34, 61);
+    padding: 20px;
+  }
+  .sidebar h3 {
+    margin-top: 0;
+  }
+  .canvas {
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding: 0;
+  }
+
+  .border-right {
+    border-right: 2px solid rgb(181, 253, 255) !important;
+  }
+
+  .title-style {
+    color: #29bbc5;
+    font-size: 50px;
+    font-weight: bold;
+    background: rgb(0, 34, 61);
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .subtitle-style {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  }
+
+  p{
+    color: azure;
+  }
+

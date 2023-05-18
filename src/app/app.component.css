@@ -1,0 +1,17 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: rgb(255, 0, 0);;
+    padding: 20px;
+  }
+  .sidebar h3 {
+    margin-top: 0;
+  }
+  .canvas {
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding: 0;
+  }
+
