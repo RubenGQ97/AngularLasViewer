@@ -21,6 +21,7 @@
     "@loaders.gl/core": "^3.3.5",
     "@loaders.gl/las": "^3.3.5",
     "@types/three": "^0.152.0",
+    "eslint": "^8.41.0",
     "las-js": "^3.2.4",
     "potree": "^0.1.0",
     "rxjs": "~7.8.0",

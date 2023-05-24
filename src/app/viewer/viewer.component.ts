@@ -39,11 +39,12 @@ export class ViewerComponent implements OnInit, AfterViewInit {
     
     //Creamos y configuramos la camara
     this.camera = new THREE.PerspectiveCamera();
-    this.camera.position.set(0,0,10);
-
+    this.camera.position.set(this.data[0],this.data[1],this.data[2]);
     //configuramos los controles
-    this.flyControls = new FlyControls(this.camera, this.canvas);
-    this.flyControls.movementSpeed = 5
+    this.flyControls = new FlyControls(this.camera, this.canvasRef.nativeElement);
+    this.flyControls.movementSpeed = 3;
+    this.flyControls.rollSpeed=0.01
+
 
 
 
@@ -69,11 +70,10 @@ export class ViewerComponent implements OnInit, AfterViewInit {
     let component: ViewerComponent = this;
     (function render() {
       requestAnimationFrame(render);
+      component.flyControls.update(1);
       component.renderer.render(component.scene, component.camera);
     }());
   }
-
-
 
   constructor() {
 
@@ -85,7 +85,6 @@ export class ViewerComponent implements OnInit, AfterViewInit {
   }
 
   async ngAfterViewInit() {
-    await LasLoader()
     await this.ngOnInit()
     this.startRenderingLoop();
     this.camera.position.set(this.data[0],this.data[1],this.data[2]);
